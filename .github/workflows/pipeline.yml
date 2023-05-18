@@ -21,11 +21,14 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-      
+        
     - name: Compilar Classe com o Java
       run: |
-        javac -cp . src/main/java Testes.java
-        javac -cp . src/main/java Main.java
+        cd src
+        cd main
+        cd java
+        javac -cp . Testes.java
+        javac -cp . Main.java
       
     - name: Executando o Java
       run: |
@@ -41,4 +44,5 @@ jobs:
     - name: Incrementando a versão 
       id: increment_version 
       run: echo ::set-output name=version::$((${{ steps.get_version.outputs.version }} + 1)) 
+
 
