@@ -32,8 +32,9 @@ jobs:
       
     - name: Executando o Java
       run: |
-            cd src
-            java Testes
+          cd src
+          cd main
+          java Testes
             
     - name: Obtendo a versão atual 
       id: get_version 
