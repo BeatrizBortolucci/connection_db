@@ -33,8 +33,6 @@ jobs:
     - name: Executando o Java
       run: |
             cd src
-            cd main
-            cd java
             java Testes
             
     - name: Obtendo a versão atual 
